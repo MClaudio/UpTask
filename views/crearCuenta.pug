@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        include partials/head
+    body.login
+        .contenedor-formulario 
+            h1 Crea tu cuenta
+
+            if locals.mensajes 
+                .alertas 
+                    each  categoria in Object.keys(locals.mensajes)
+                        each error in mensajes[categoria]
+                            .alerta(class=`${categoria}`)
+                                p= error
+
+            form#formulario.caja.caja-login(action="/crear-cuenta" method="POST")
+                .campo
+                    label(for="email") E-mail
+                    input(type="email" name="email" placeholder="Tu Email" value= email)
+                .campo
+                    label(for="pass") Contraseña
+                    input(type="password" name="pass" placeholder="Tu contraseña" value= pass)
+                .campo.enviar
+                    input.boton(type="submit" value="Crear Cuenta")
+                .campo
+                    a(href="/iniciar-sesion") Volver a Iniciar Sesion
+        script(src="/dist/bundle.js")

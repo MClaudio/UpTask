@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        style 
+            include  ./email.css
+
+    body
+        h2 Confirmar cuenta UpTask
+        p Ya estas casi inscrito, confirma tu cuenta en el siguiente enlace.
+        a(href=`${confirmarUrl}`) Ir a Resetear el password
+        p Si no pudes acceder a este enlace, vicita 
+            a(href=`${confirmarUrl}`) #{confirmarUrl}
