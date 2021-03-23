@@ -1,7 +1,7 @@
 # UpTask
 Proyecto en NodeJS
 
-Demo app on https://uptask.claudiomldo.com
+Demo app on http://uptask.claudiomldo.com
 
 user: demo@email.com
 
